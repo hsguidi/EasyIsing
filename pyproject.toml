@@ -1,0 +1,37 @@
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "EasyIsing"
+version = "0.1.0"
+authors = [
+  { name="Henrique S. Guidi", email="henriquesguidi@gmail.com" },
+]
+description = "A small package that provides a simple Ising model simulation on a squared lattice with the Metropolis algorithm."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Environment :: GPU :: NVIDIA CUDA :: 11.0",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: C",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [ "numpy~=1.24", "scipy~=1.9.0" ]
+keywords = ["Ising", "Monte Carlo", "Lattice gas", "Metropolis", "Statistical mechanics"]
+
+[project.optional-dependencies]
+cupy = ["cupy~=11.0.0"]
+
+[project.urls]
+"Homepage" = "https://github.com/pypa/sampleproject"
+"Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
+
+[tool.hatch.build.targets.custom]
+path = "EasyIsing/IsingC/"
