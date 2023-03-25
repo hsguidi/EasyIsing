@@ -1,6 +1,6 @@
 # EasyIsing
 
-This is a Python module that performs the simulation of the Ising model on a square lattice using the Metropolis algorithm. Initially, this tool was made to be used in courses on data analysis or statistical mechanics so that students could generate their own data without wasting time writing simulation code that wasn't the goal.
+This is a Python module that performs the simulation of the Ising model on a square lattice using the Metropolis algorithm. Initially, this tool was made to be used in courses on data analysis or statistical mechanics so that students could generate their own data without having to build a simulator from scratch.
 
 Nevertheless, it contains reasonably clean code with minimal optimizations that can be copied and modified, making it easier for undergraduate students to start their projects.
 
@@ -12,7 +12,7 @@ The square lattice is a network of sites, each of which has four immutable conne
 
 There is some freedom in the Metropolis algorithm, allowing for the choice of how to change spins in any way that satisfies the detailed balance condition. Typically, one site is chosen randomly because there are no particular reasons to favor one site over another. All sites are equivalent and, due to periodic boundary conditions, are indistinguishable even spatially.
 
-The checkerboard decomposition parallelization approach consists of separating the lattice into two sub-lattices of the same size, like a chessboard. Since the interactions are restricted to first neighbors, there is no interaction between sites of the same sub-lattice. You can update all sites of a sub-lattice at once, which is a common approach to parallelizing Ising-like models.
+The checkerboard decomposition parallelization approach consists of separating the lattice into two sub-lattices of the same size, like a chessboard. Since the interactions are restricted to first neighbors, there is no interaction between sites of the same sub-lattice. One can update all sites of a sub-lattice at once, which is a common approach to parallelizing Ising-like models.
 
 Both random sequential and checkerboard parallelization should have the same equilibrium properties since both satisfy the detailed balance condition.
 
@@ -45,7 +45,7 @@ pip install EasyIsing
 ### Usage
 
 When imported, there are four classes of objects that can be used.
-You just have to create an instance with the desired arguments.
+The user just have to create an instance with the desired arguments.
 For example:
 
 ```Python
@@ -85,11 +85,11 @@ There is a few examples in directory examples:
 * [Magnetic Hysteresis](examples/MagneticHysteresisLoop.ipynb)
 * [performances](examples/Performance.ipynb)
 
-You can override 'EasyIsing.Ising.sampling' to accumulate other data, or create your custom sampling routine. For example, you could include the spatial correlation function or 'energy4' and 'magnet4' to calculate Binder's coefficient.
+The user can override 'EasyIsing.Ising.sampling' to accumulate other data, or create custom sampling routine. For example, to include the spatial correlation function or 'energy4' and 'magnet4' to calculate Binder's coefficient.
 
 ## Suggestions
 
-Here are some suggestions for fun things you can do and analyze using the Ising model simulation:
+Here are some suggestions for fun things students can do and analyze using the Ising model simulation:
 
 * Observe the system "walking" to equilibrium with different initial states.
 * Analyze the size of error bars for energy, magnetization, etc. as a function of sample size and lattice size.
