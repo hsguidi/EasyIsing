@@ -28,7 +28,7 @@ This library contains four classes, each with a different implementation:
 With different [performances](examples/Performance.ipynb):
 
 <picture>
-    <img src="examples/performance.png">
+    <img src="https://github.com/hsguidi/EasyIsing/blob/main/examples/performance.png">
 </picture>
 
 
@@ -102,18 +102,18 @@ Here are some suggestions for fun things students can do and analyze using the I
 * Explore magnetic hysteresis using the Magnetic Hysteresis Loop example provided in the EasyIsing module.
 
 <picture>
-    <img src="examples/magnetization.png">
+    <img src="https://github.com/hsguidi/EasyIsing/blob/main/examples/magnetization.png">
 </picture>
 
 <picture>
-    <img src="examples/specificHeat.png">
+    <img src="https://github.com/hsguidi/EasyIsing/blob/main/examples/specificHeat.png">
 </picture>
 
 <picture>
-    <img src="examples/mh2.8.jpg">
+    <img src="https://github.com/hsguidi/EasyIsing/blob/main/examples/mh2.8.jpg">
 </picture>
 
-## Conclutions
+## Conclusions
 
 Conclusively, C is an excellent choice for single-threaded performance.
 I expect similar performance for FORTRAN, Rust, and C++.
