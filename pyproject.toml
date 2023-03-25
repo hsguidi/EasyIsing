@@ -30,8 +30,5 @@ keywords = ["Ising", "Monte Carlo", "Lattice gas", "Metropolis", "Statistical me
 cupy = ["cupy~=11.0.0"]
 
 [project.urls]
-"Homepage" = "https://github.com/pypa/sampleproject"
-"Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
-
-[tool.hatch.build.targets.custom]
-path = "EasyIsing/IsingC/"
+"Homepage" = "https://github.com/hsguidi/EasyIsing"
+"Bug Tracker" = "https://github.com/hsguidi/EasyIsing/issues"
